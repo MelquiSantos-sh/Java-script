@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+     ARRAYS == VETORES == LISTAS
+
+ <script>
+
+
+    let alunos = [];  // declara o array alunos
+    console.log("tamanho", alunos.length); // 0
+      // adiconar Maria
+       alunos.push("Maria");
+        console.log("tamanho", alunos.length); //1
+        console.log(alunos);
+        alunos.push("Amanda");
+        alunos.push("Jussara");
+        alunos.push("Jose");
+        console.log(alunos);
+        console.log("tamanho", alunos.length); //4
+
+        // acessar o elemento do array
+        console.log("primeiro aluno:", alunos[0]);
+        console.log("segundo aluno:", alunos[1]);
+        console.log("terceiro aluno:", alunos[2]);
+        console.log("quarto aluno:", alunos[3]);
+
+        // INDICE DO ARRAY COMEÇA EM ZERO, 
+        // ENTÃO O ULTIMO ELEMENTO DO ARRAY ESTÁ
+        //  NA POSIÇÃO (TAMANHO - 1)
+        // começa em 0 e termina em length - 1
+
+        
+        // localizar o ultimo elemento do array
+        console.log("primeiro aluno:", alunos[0]);  
+        let posicao = alunos.length - 1; // calcula a posição do ultimo elemento
+        console.log("ultimo aluno:", alunos[posicao]);
+
+
+        console.log(alunos.sort()); // ordena o array em ordem alfabética
+
+
+
+        alunos.sort() // ordena o array em ordem alfabética
+        // (caso for numerico organiza em ordem decrecente, 
+        // depende do item e tipo que esta solicitando)
+        console.log(alunos);
+
+        // remover o ultimo elemento do array
+        alunos.pop(); // remove o ultimo elemento do array
+        console.log(alunos);   
+        
+        //percorrer a lista 
+        for (let i = 0; i < alunos.length; i++) {
+          console.log((i+1), alunos[i]);
+        }
+        //for moderno   // pode ser visto como e de elemento
+        alunos.forEach((aluno )=> console.log(aluno));
+                    //   (e)                   (e)
+
+        alunos.forEach((nome, index)=> {console.log(index+1, nome.toUpperCase())});
+  
+  
+        //localizar elemento
+        let nomeBusca = "Maria";
+        alunos.forEach((e, index) => 
+        {
+            if (e == nomeBusca) {
+        console.log(e, "encontrou!", "index:", index);
+        }
+        });
+        
+  </script>
+    
+</body>
+</html>
